@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  padding: 5px 15px;
+}
+
+header ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+header ul li {
+  float: right;
+  margin: 0px 20px;
+}
+
+header ul li a {
+  display: block;
+  color: #007ED9;
+  margin: 16px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-size: 16px;
+}
+
+header ul li a:hover {
+  color: #e6e6e6;
+}
+
+header ul li i {
+  margin: 10px;
+  font-size: 28px;
+  color: #007ED9;
+}
+
+#mobile-navbar {
+  visibility: hidden;
+  color: #007ED9;
+  position: fixed;
+  right: 10px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #007ED9;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #002540;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: #007ED9;
+}
+
+.services div {
+  padding: 60px 90px;
+}
+
+.services div h1 {
+  font-size: 124px;
+}
+
+.services div h3 {
+  padding: 20px 0px;
+}
+
+.services div button {
+  background-color: #007ED9;
+  border: none;
+  color: black;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px 0px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.services img {
+  border-radius: 100%;
+  width: 480px;
+  -webkit-box-shadow: 0px 18px 2px -2px rgba(108, 194, 255, 0.4);
+          box-shadow: 0px 18px 2px -2px rgba(108, 194, 255, 0.4);
+}
+
+@media only screen and (max-width: 600px) {
+  #mobile-navbar {
+    visibility: visible;
+  }
+  .desktop {
+    display: none;
+  }
+}
