@@ -23,13 +23,25 @@ function clearCircles(){
 }
 
 function setSlide(id){
+    let nextId = id;
+    switch(id){
+        case -1:
+            nextId = content.length-1;
+            break;
+        case content.length:
+            nextId = 0;
+            break;
+        default:
+            break;
+    }
+    console.log(id, nextId)
     clearCircles();
     slideshow.childNodes[1]
         .childNodes[5]
         .childNodes[3]
-        .textContent = content[id].body
-    document.getElementsByClassName('slideshow-circle')[id].classList.add('active');
-    slideshow.setAttribute('current-slide', id);
+        .textContent = content[nextId].body
+    document.getElementsByClassName('slideshow-circle')[nextId].classList.add('active');
+    slideshow.setAttribute('current-slide', nextId);
 }
 
 function arrowSwitch(key){
