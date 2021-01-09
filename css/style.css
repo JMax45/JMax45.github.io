@@ -176,6 +176,10 @@ header ul li i {
   color: #cccccc;
 }
 
+.interesting-facts .dots i {
+  margin: 0px 2px;
+}
+
 .interesting-facts .active {
   color: #ffffff;
 }

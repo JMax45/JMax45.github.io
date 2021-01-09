@@ -140,6 +140,9 @@ header {
     padding: 50px 0px 0px 0px;
     text-align: center;
     color: darken($primary-color, 20);
+    i{
+      margin: 0px 2px;
+    }
   }
   .active{
     color: $primary-color;
