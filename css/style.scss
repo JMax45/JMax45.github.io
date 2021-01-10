@@ -14,35 +14,41 @@ body {
 }
   
 header {
+  display: flex;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 5px 15px;
+  h1{
+    color: $primary-color;
+    padding: 16px;
+  }
+  ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $primary-color;
-    padding: 5px 15px;
-    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: auto;
+    li{
+      float: left;
+      a {
+        display: block;
+        color: $primary-color;
         text-align: center;
-        list-style-type: none;
-        li{
-            float: right;
-            margin: 0px 20px;
-            a{
-                display: block;
-                color: $secondary-color;
-                margin: 16px;
-                text-decoration: none;
-                transition: color 0.2s;  
-                font-size: 16px;
-            }
-            a:hover{
-                color: darken($primary-color, 10%);
-            }
-            i{
-                margin: 10px;
-                font-size: 28px;
-                color: $secondary-color;
-            }
+        padding: 16px;
+        text-decoration: none;
+        transition: color 0.1s;
+        .social-icon{
+          font-size: 25px;
         }
+      }
+      a:hover{
+        color: darken($primary-color, 10%)
+      }
     }
+  }
 }
 
 #mobile-navbar{
