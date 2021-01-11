@@ -148,6 +148,46 @@ header {
     max-width: 400px;
   }
 }
+
+footer{
+  background-color: $secondary-color;
+  color: $primary-color;
+  .top{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    div{
+      flex: 1;
+      margin: 10px;
+      .title{
+        border-bottom: $primary-color solid 1px;
+        width: 50%;
+        margin-bottom: 10px;
+      }
+      ul{
+        list-style-type: none;
+        li{
+          padding: 3px 0px;
+          a{
+            color: $primary-color;
+            text-decoration: none;
+            transition: 0.1s;
+          }
+          a:hover{
+            color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+  .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($secondary-color, 10%);
+    padding: 20px;
+  }
+}
     
 @media only screen and (max-width: 600px) {
   #mobile-navbar{
