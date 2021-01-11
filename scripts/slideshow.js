@@ -1,8 +1,7 @@
 const content = [
-    { body: "Stanco di rimandare viaggi perché hai problemi con il tuo animale domestico? Contattami!" },
-    { body: "Sapevi che il muso di ogni cane è unico? Non possono esistere al mondo due musi uguali, proprio come succede con le impronte digitali dell'uomo. Anche i cani hanno i propri tratti distintivi." },
-    { body: "Il colore del tartufo potrebbe cambiare a causa di una bruciatura o per conto del cambio climatico." },
-    { body: "I baffi dei cani, per quanto molto più corti dei corrispettivi felini, hanno la particolare funzione di percepire il benché minimo spostamento d'aria e avvisare previamente su forma, dimensione e distanza da un eventuale pericolo. Sono utilissimi specialmente di notte, quando la visione è molto ridotta." }
+    { body: "Stanco di rimandare viaggi perché hai problemi con il tuo animale domestico? Contattami!", thumbnail: 'media/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg' },
+    { body: "Sapevi che il muso di ogni cane è unico? Non possono esistere al mondo due musi uguali, proprio come succede con le impronte digitali dell'uomo. Anche i cani hanno i propri tratti distintivi.", thumbnail: "media/marliese-streefland-2l0CWTpcChI-unsplash.jpg" },
+    { body: "Il colore del tartufo potrebbe cambiare a causa di una bruciatura o per conto del cambio climatico.", thumbnail: 'media/jamie-street-UtrE5DcgEyg-unsplash.jpg' },
 ]
 
 const slideshow = document.getElementsByClassName('interesting-facts')[0];
@@ -34,7 +33,6 @@ function setSlide(id){
         default:
             break;
     }
-    console.log(id, nextId)
     clearCircles();
     slideshow.childNodes[1]
         .childNodes[5]
@@ -42,6 +40,7 @@ function setSlide(id){
         .textContent = content[nextId].body
     document.getElementsByClassName('slideshow-circle')[nextId].classList.add('active');
     slideshow.setAttribute('current-slide', nextId);
+    slideshow.getElementsByClassName('thumbnail')[0].setAttribute('src', content[nextId].thumbnail)
 }
 
 function arrowSwitch(key){
