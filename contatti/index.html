@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3849555537.js" crossorigin="anonymous"></script>
+<script src="scripts/index.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/contatti.css">
+</head>
+<body>
+
+<header>
+  <h1><i class="fas fa-dog"></i> GIULIOPETS</h1>
+  <ul>
+    <li class="desktop"><a href="/">Home</a></li>
+    <li class="desktop"><a href="/servizi/">Servizi</a></li>
+    <li class="desktop"><a href="#">Shop</a></li>
+    <li class="desktop"><a href="#">Download</a></li>
+    <li class="desktop"><a href="#">Gallery</a></li>
+    <li class="desktop"><a href="#">Info & Contatti</a></li>
+    <li class="desktop"><a href="#"><i class="fab fa-instagram social-icon"></i></a></li>
+    <li class="desktop"><a href="#"><i class="fab fa-twitter social-icon"></i></a></li>
+    <li class="desktop"><a href="#"><i class="fas fa-envelope social-icon"></i></a></li>
+    <li><span id='mobile-navbar' style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span></li>
+  </ul>
+</header>
+
+<div class="email">
+    <form action="/">
+
+        <div class="sameline">
+            <input type="text" id="name" name="firstname" placeholder="Nome">
+            <input type="text" id="phonenumber" name="phonenumber" placeholder="Telefono">
+        </div>
+        <div class="sameline"><input type="text" id="email" name="email" placeholder="Email"></div>
+        <div class="sameline">
+            <input type="text" id="size" name="size" placeholder="Taglia del cane">
+            <input type="text" id="breed" name="breed" placeholder="Razza del cane">
+        </div>
+        <div class="sameline">
+            <input type="text" id="gender" name="gender" placeholder="Sesso del Cane">
+            <input type="text" id="behavior" name="behavior" placeholder="Carattere">
+        </div>
+        <div class="sameline"><input type="text" id="food" name="food" placeholder="Abitudini alimentari"></div>
+        <div class="sameline">
+            <input type="text" id="vaccines" name="vaccines" placeholder="Vaccini">
+            <select id="sterilized" name="sterilized">
+              <option value="yes">Si</option>
+              <option value="no">No</option>
+            </select>
+        </div>
+    
+        <div class="sameline"><textarea id="additional" name="additional" placeholder="Note aggiuntive" style="height:200px"></textarea></div>
+    
+        <input type="submit" value="Invia">
+    
+    </form>
+</div>
+
+<footer>
+    <div class="top">
+      <div>
+        <p class="title">CHI SONO</p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div>
+        <p class="title">POLICY</p>
+        <ul class="policy">
+          <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy policy</a></li>
+          <li><a href="#"><i class="fas fa-cookie-bite"></i> Cookie Policy</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> info@giuliopets.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>© Copyright 2021 GiulioPets - All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
