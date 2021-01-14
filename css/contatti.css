@@ -1,3 +1,8 @@
+body {
+  background-color: #ffffff;
+  background-image: url(/media/topography.svg);
+}
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%;
