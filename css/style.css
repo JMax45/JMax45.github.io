@@ -237,6 +237,16 @@ footer .top div ul li a:hover {
   color: #e6e6e6;
 }
 
+footer .top div .policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .top div .policy li {
+  padding-right: 20px;
+}
+
 footer .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
