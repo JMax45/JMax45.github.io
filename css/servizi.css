@@ -48,6 +48,12 @@
   font-size: 32px;
 }
 
+.services-blocks div img {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   .services-blocks {
     display: block;
