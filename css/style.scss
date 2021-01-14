@@ -14,10 +14,13 @@ body {
 }
   
 header {
+  position: sticky;
+  top: -1px;
   display: flex;
   align-items: center;
   background-color: $secondary-color;
   padding: 5px 15px;
+  transition: padding 0.2s;
   h1{
     color: $primary-color;
     padding: 16px;
@@ -49,6 +52,9 @@ header {
       }
     }
   }
+}
+header.isSticky{
+  padding: 1px 15px;
 }
 
 #mobile-navbar{

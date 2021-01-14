@@ -8,6 +8,9 @@ body {
 }
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +19,8 @@ header {
           align-items: center;
   background-color: #007ED9;
   padding: 5px 15px;
+  -webkit-transition: padding 0.2s;
+  transition: padding 0.2s;
 }
 
 header h1 {
@@ -60,6 +65,10 @@ header ul li a .social-icon {
 
 header ul li a:hover {
   color: #e6e6e6;
+}
+
+header.isSticky {
+  padding: 1px 15px;
 }
 
 #mobile-navbar {
