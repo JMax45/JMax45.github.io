@@ -1,0 +1,24 @@
+$primary-color:#ffffff;
+$secondary-color: #007ED9;
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 50px;
+    background-color: #ffffff;
+    background-image: url(/media/topography.svg);
+    .picture{
+        margin: 15px 0px;
+        img{
+            width: 224px;
+            padding: 10px;
+            margin: 10px;
+            background-color: $primary-color;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        p{
+            padding: 0px 10px;
+        }
+    }
+}
