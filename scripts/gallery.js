@@ -1,6 +1,10 @@
 const pictures = [
-    { src: '/media/gallery1.jpg', alt: 'cani', title: 'Cani' },
-    { src: '/media/gallery2.jpg', alt: 'cani', title: 'Cani' }
+    { src: '/media/pauline-loroy-U3aF7hgUSrk-unsplash.jpg', alt: 'cani', title: 'Cani' },
+    { src: '/media/karsten-winegeart-5PVXkqt2s9k-unsplash.jpg', alt: 'cani', title: 'Cani' },
+    { src: '/media/angel-luciano-LATYeZyw88c-unsplash.jpg', alt: 'cani', title: 'Cani' },
+    { src: '/media/alvan-nee-T-0EW-SEbsE-unsplash.jpg', alt: 'cani', title: 'Cani' },
+    { src: '/media/anna-dudkova-urs_y9NwFcc-unsplash.jpg', alt: 'cani', title: 'Cani' },
+    { src: '/media/cristian-castillo-73pyV0JJOmE-unsplash.jpg', alt: 'cani', title: 'Cani' }
 ]
 
 const gallery = document.getElementsByClassName('gallery')[0];
