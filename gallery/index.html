@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/gallery.css">
   <link rel="icon" href="/media/favicon.ico">
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
   <title>GiulioPets</title>
 </head>
 <body>
@@ -34,7 +35,27 @@
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
-</div> 
+</div>
+
+<div class="upload-modal">
+  <span class="close">&times;</span>
+
+  <div class="fileupload">
+    <!-- We'll transform this input into a pond -->
+    <input type="file" class="filepond" multiple="true">
+  </div>
+
+  <!-- Load FilePond library -->
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+  <!-- Turn all file input elements into ponds -->
+  <script src="/locale/it-it.js"></script>
+  <script>
+    FilePond.parse(document.body);
+    FilePond.setOptions({ server: 'http://localhost:5000/api/upload/' })
+    FilePond.setOptions(it_IT)
+  </script>
+</div>
 
 <div id="mobile-sidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

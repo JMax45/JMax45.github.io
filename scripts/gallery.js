@@ -40,6 +40,12 @@ gallery.append(picture_upload);
 
 
 var span = document.getElementsByClassName("uploadImg")[0];
+var upload_modal = document.getElementsByClassName("upload-modal")[0];
 span.onclick = function() {
-  console.log('upload click')
+  upload_modal.style.display = "flex";
+}
+
+var span = document.getElementsByClassName("close")[1];
+span.onclick = function() {
+  upload_modal.style.display = "none";
 }
