@@ -8,23 +8,19 @@ body {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #007ED9;
   padding: 5px 15px;
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
+  color: #007ED9;
 }
 
 header h1 {
-  color: #ffffff;
   padding: 16px;
 }
 
@@ -51,7 +47,7 @@ header ul li {
 
 header ul li a {
   display: block;
-  color: #ffffff;
+  color: #007ED9;
   text-align: center;
   padding: 16px;
   text-decoration: none;

@@ -14,15 +14,12 @@ body {
 }
   
 header {
-  position: sticky;
-  top: -1px;
   display: flex;
   align-items: center;
-  background-color: $secondary-color;
   padding: 5px 15px;
   transition: padding 0.2s;
+  color: $secondary-color;
   h1{
-    color: $primary-color;
     padding: 16px;
   }
   ul{
@@ -38,7 +35,7 @@ header {
       float: left;
       a {
         display: block;
-        color: $primary-color;
+        color: $secondary-color;
         text-align: center;
         padding: 16px;
         text-decoration: none;

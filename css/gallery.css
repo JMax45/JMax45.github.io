@@ -13,7 +13,6 @@
           justify-content: center;
   padding: 50px 50px;
   background-color: #ffffff;
-  background-image: url(/media/topography.svg);
 }
 
 .gallery .picture {
@@ -38,6 +37,7 @@
 
 .gallery .picture p {
   padding: 0px 10px;
+  color: #007ED9;
 }
 
 /* Style the Image Used to Trigger the Modal */
