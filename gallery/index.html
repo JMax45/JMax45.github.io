@@ -5,6 +5,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3849555537.js" crossorigin="anonymous"></script>
+  <script src="/scripts/config.js"></script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/gallery.css">
   <link rel="icon" href="/media/favicon.ico">
@@ -14,7 +15,8 @@
 <body>
 
 <header>
-  <h1><i class="fas fa-dog"></i> GIULIOPETS</h1>
+  <!-- <h1><i class="fas fa-dog"></i> GIULIOPETS</h1> -->
+  <img src="/media/20200222-1-WOOUTLINE (3)(2).png" alt="" style="width: 150px;">
   <ul>
     <li class="desktop"><a href="/">Home</a></li>
     <li class="desktop"><a href="/servizi/">Servizi</a></li>
@@ -51,8 +53,14 @@
   <!-- Turn all file input elements into ponds -->
   <script src="/locale/it-it.js"></script>
   <script>
-    FilePond.parse(document.body);
-    FilePond.setOptions({ server: 'http://localhost:5000/api/gallery/upload/' })
+    // FilePond.parse(document.body);
+    const inputElement = document.getElementsByClassName('filepond')[0];
+    const myPond = FilePond.create(inputElement, {
+      onprocessfile: (file) => { 
+        generateGallery();
+      }
+    });
+    FilePond.setOptions({ server: config.API_URL+'gallery/upload/' })
     FilePond.setOptions(it_IT)
   </script>
 </div>

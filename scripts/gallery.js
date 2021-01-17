@@ -23,10 +23,7 @@ modal.onclick = function(){
   modal.style.display = "none";
 }
 
-httpGetAsync('http://localhost:5000/api/gallery/', (res) => {
-  const pictures = JSON.parse(res);
-  
-  pictures.forEach(element => {
+function generatePic(pic){
     // Create picture element
     const picture = document.createElement('div');
     picture.classList.add('picture');
@@ -34,45 +31,57 @@ httpGetAsync('http://localhost:5000/api/gallery/', (res) => {
     // Picture element
     const img = document.createElement('img');
     img.classList.add('modalImg');
-    img.setAttribute('src', element.url);
-    img.setAttribute('alt', element.alt)
+    img.setAttribute('src', pic.url);
+    img.setAttribute('alt', pic.alt)
 
     // Paragraph element
     const p = document.createElement('p');
-    p.textContent = element.title;
+    p.textContent = pic.title;
 
     // Append the created elements
     picture.append(img);
     picture.append(p);
     gallery.append(picture);
-  });
-  const picture_upload = document.createElement('div');
-  picture_upload.classList.add('picture');
-  const image = document.createElement('img');
-  image.classList.add('uploadImg');
-  image.setAttribute('src', '/media/upload-logo.svg');
-  picture_upload.append(image);
-  gallery.append(picture_upload);
-  var span = document.getElementsByClassName("uploadImg")[0];
-  var upload_modal = document.getElementsByClassName("upload-modal")[0];
-  span.onclick = function() {
-    upload_modal.style.display = "flex";
-  }
+}
 
-  var span = document.getElementsByClassName("close")[1];
-  span.onclick = function() {
-    upload_modal.style.display = "none";
-  }
-
-  const imgs = document.getElementsByClassName('modalImg');
-  var img = document.getElementById("myImg");
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-  for (const item of imgs){
-    item.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+function generateGallery(){
+  httpGetAsync(config.API_URL+'gallery/', (res) => {
+    gallery.innerHTML = '';
+    const pictures = JSON.parse(res);
+    
+    pictures.forEach(element => {
+      generatePic(element)
+    });
+    const picture_upload = document.createElement('div');
+    picture_upload.classList.add('picture');
+    const image = document.createElement('img');
+    image.classList.add('uploadImg');
+    image.setAttribute('src', '/media/upload-logo.svg');
+    picture_upload.append(image);
+    gallery.append(picture_upload);
+    var span = document.getElementsByClassName("uploadImg")[0];
+    var upload_modal = document.getElementsByClassName("upload-modal")[0];
+    span.onclick = function() {
+      upload_modal.style.display = "flex";
     }
-  }
-})
+  
+    var span = document.getElementsByClassName("close")[1];
+    span.onclick = function() {
+      upload_modal.style.display = "none";
+    }
+  
+    const imgs = document.getElementsByClassName('modalImg');
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for (const item of imgs){
+      item.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+      }
+    }
+  })
+}
+
+generateGallery();
