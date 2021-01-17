@@ -23,6 +23,9 @@ $secondary-color: #007ED9;
         img:hover{
           background-color: darken($primary-color, 10%);
         }
+        .uploadImg{
+          background-color: $secondary-color;
+        }
         p{
             padding: 0px 10px;
             color: $secondary-color;

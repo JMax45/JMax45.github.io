@@ -29,3 +29,17 @@ pictures.forEach(element => {
     picture.append(p);
     gallery.append(picture);
 });
+
+const picture_upload = document.createElement('div');
+picture_upload.classList.add('picture');
+const image = document.createElement('img');
+image.classList.add('uploadImg');
+image.setAttribute('src', '/media/upload-logo.svg');
+picture_upload.append(image);
+gallery.append(picture_upload);
+
+
+var span = document.getElementsByClassName("uploadImg")[0];
+span.onclick = function() {
+  console.log('upload click')
+}

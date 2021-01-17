@@ -36,6 +36,10 @@
   background-color: #e6e6e6;
 }
 
+.gallery .picture .uploadImg {
+  background-color: #007ED9;
+}
+
 .gallery .picture p {
   padding: 0px 10px;
   color: #007ED9;
