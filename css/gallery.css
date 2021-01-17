@@ -17,6 +17,7 @@
 
 .gallery .picture {
   margin: 15px 0px;
+  text-align: center;
 }
 
 .gallery .picture img {
