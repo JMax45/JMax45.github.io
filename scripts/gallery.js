@@ -18,10 +18,14 @@ function httpGetAsync(theUrl, callback){
 }
 
 const gallery = document.getElementsByClassName('gallery')[0];
+const modal = document.getElementById("myModal");
+modal.onclick = function(){
+  modal.style.display = "none";
+}
 
 httpGetAsync('http://localhost:5000/api/gallery/', (res) => {
   const pictures = JSON.parse(res);
-  console.log(pictures)
+  
   pictures.forEach(element => {
     // Create picture element
     const picture = document.createElement('div');
@@ -58,5 +62,17 @@ httpGetAsync('http://localhost:5000/api/gallery/', (res) => {
   var span = document.getElementsByClassName("close")[1];
   span.onclick = function() {
     upload_modal.style.display = "none";
+  }
+
+  const imgs = document.getElementsByClassName('modalImg');
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  for (const item of imgs){
+    item.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
   }
 })
